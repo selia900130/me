@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學歷</title>
+    <style>
+        body {margin:0;
+            background-color:rgb(244, 234, 245)
+        }
+        
+        .navbar {
+          overflow: hidden;
+          background-color: rgb(113, 42, 131);
+          position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+        }
+        
+        .navbar a {
+          float:left;
+          display: block;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-weight: bolder;
+          font-size: 20px;
+        }
+        
+        .navbar a:hover {
+          background: rgb(241, 234, 243);
+          color: rgb(79, 13, 92);
+        }
+
+        * {
+        box-sizing: border-box;
+        }
+
+        .column {
+          float: left;
+          width: 25%;
+          padding: 0 10px;
+          
+        }
+
+        .row {margin: 0 -5px;
+        margin-top: 150px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+          display: block;
+          margin-bottom: 40px;
+        }
+        }
+
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(52, 19, 65, 0.2);
+          padding: 16px;
+          text-align: center;
+          background-color: #f1f1f1;
+          border-radius: 30px;
+          
+        }
+
+  
+
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">首頁</a>
+        <a href="aboutme.html">關於我</a>
+        <a href="education.html">學歷</a>
+        <a href="life.html">生活</a>
+        <a href="interest.html">興趣</a>
+        <a href="pet.html">寵物</a>
+        <a href="skill.html">技能</a>
+        <a href="work.html">工作</a>
+        <a href="hope.html">回顧</a>
+        <a href="contactme.html">聯絡我</a>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <h1>中正國小</h1>
+            <a href="http://www.ccps.tyc.edu.tw/index.php" target="_blank">
+                <img src="image/中正.jpg" width="50%"></a>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <h1>自強國中</h1>
+            <a href="http://www.tcjh.tyc.edu.tw/nss/p/index" target="_blank">
+            <img src="image/自強.gif" width="50%"></a>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <h1>中壢高商</h1>
+            <a href="http://www.clvsc.tyc.edu.tw/files/11-1000-476.php" target="_blank">
+            <img src="image/壢商.gif" width="50%"></a>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <h1>中原大學</h1>
+            <a href="https://www1.cycu.edu.tw/" target="_blank">
+            <img src="image/中原.png" width="50%"></a>
+          </div>
+        </div>
+      </div>
+  
+</body>
+</html>

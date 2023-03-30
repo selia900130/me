@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <style>
+        {margin:0;
+            background-color:rgb(244, 234, 245)
+        }
+        
+        .navbar {
+        overflow: hidden;
+        background-color: rgb(113, 42, 131);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        }
+        
+        .navbar a {
+        float:left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-weight: bolder;
+        font-size: 20px;
+        }
+        
+        .navbar a:hover {
+        background: rgb(241, 234, 243);
+        color: rgb(79, 13, 92);
+        }
+
+        * {box-sizing: border-box}
+        body {font-family: Verdana, sans-serif; margin:0}
+        .mySlides {display: none}
+        img {vertical-align: middle;}
+
+
+        .slideshow-container {
+        max-width: 850px;
+        position: relative;
+        margin: auto;
+        margin-top: 55px;
+        }
+
+        .text {
+        color: #f2f2f2;
+        font-size: 20px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        }
+
+
+        .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: rgb(241, 220, 250);
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+        background-color: #7f5286;
+        }
+
+        .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+        }
+
+        @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+        }
+
+
+        @media only screen and (max-width: 300px) {
+        ,.text {font-size: 11px}
+        }
+    </style> 
+</head>
+<body>
+        <div class="navbar">
+            <a href="index.html">首頁</a>
+            <a href="aboutme.html">關於我</a>
+            <a href="education.html">學歷</a>
+            <a href="life.html">生活</a>
+            <a href="interest.html">興趣</a>
+            <a href="pet.html">寵物</a>
+            <a href="skill.html">技能</a>
+            <a href="work.html">工作</a>
+            <a href="hope.html">未來展望</a>
+            <a href="contactme.html">聯絡我</a>
+        </div>
+
+        <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img src="image/index4.jpg" style="width:100%">
+            <div class="text">永安漁港</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="image/index1.jpg" style="width:100%">
+            <div class="text">夕陽</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="image/index2.jpg" style="width:100%">
+            <div class="text">水族館</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="image/index3.jpg" style="width:100%">
+            <div class="text">埔心牧場</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="image/index5.jpg" style="width:100%">
+            <div class="text">虎頭山環保公園</div>
+        </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+        <span class="dot" onclick="currentSlide(5)"></span> 
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            var slideIndex = 0;
+            carousel();
+            
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > x.length) {slideIndex = 1}
+                x[slideIndex-1].style.display = "block";
+                setTimeout(carousel, 2000); 
+            }
+            </script>
+
+</body>
+</html>

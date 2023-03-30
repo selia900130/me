@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>興趣</title>
+    <style>
+        body {margin:0;
+            background-color:rgb(244, 234, 245)
+        }
+        
+        .navbar {
+          overflow: hidden;
+          background-color: rgb(113, 42, 131);
+          position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+        }
+        
+        .navbar a {
+          float:left;
+          display: block;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-weight: bolder;
+          font-size: 20px;
+        }
+        
+        .navbar a:hover {
+          background: rgb(241, 234, 243);
+          color: rgb(79, 13, 92);
+        }
+        * {box-sizing: border-box;}
+    
+        .container {
+        margin: auto;
+        position: relative;
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+        }
+    
+        .image {
+        display: block;
+        width: 100%;
+        height: auto;
+        }
+    
+        .overlay {
+        position: absolute; 
+        bottom: 0; 
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); 
+        color: #f1f1f1; 
+        width: 100%;
+        transition: .5s ease;
+        opacity:0;
+        color: white;
+        font-size: 20px;
+        padding: 15px;
+        text-align: center;
+        font-family:monospace;
+        }
+    
+        .container:hover .overlay {
+        opacity: 1;
+        }
+    
+        .column {
+        float:left;
+        width: 33.33%;
+        padding: 10px;
+        height: 180px; 
+        margin-top:60px;
+    
+      }
+      
+    
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">首頁</a>
+        <a href="aboutme.html">關於我</a>
+        <a href="education.html">學歷</a>
+        <a href="life.html">生活</a>
+        <a href="interest.html">興趣</a>
+        <a href="pet.html">寵物</a>
+        <a href="skill.html">技能</a>
+        <a href="work.html">工作</a>
+        <a href="hope.html">回顧</a>
+        <a href="contactme.html">聯絡我</a>
+      </div>
+
+      <div class="row">
+        <div class="column">
+      <div class="container">
+        <img src="image/food.jpg"  class="image">
+        <div class="overlay">吃美食</div>
+      </div></div>
+
+      <div class="column">
+      <div class="container">
+        <img src="image/sight1.jpg"  class="image">
+        <div class="overlay">看夕陽</div>
+      </div></div>
+
+      <div class="column">
+        <div class="container">
+          <img src="image/sight2.jpg"  class="image">
+          <div class="overlay">看風景</div>
+        </div></div>
+
+        <div class="column">
+            <div class="container">
+              <img src="image/pet.jpg"  class="image">
+              <div class="overlay">跟寵物玩</div>
+            </div></div>
+      
+            <div class="column">
+            <div class="container">
+              <img src="image/friend.JPG"  class="image">
+              <div class="overlay">跟朋友瘋狂到處跑</div>
+            </div></div>
+      
+            <div class="column">
+              <div class="container">
+                <img src="image/smile.JPG"  class="image">
+                <div class="overlay">拿朋友的照片做梗圖</div>
+              </div></div>
+      </div>
+      
+      
+</body>
+</html>
